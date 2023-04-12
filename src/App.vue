@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <h1>
-      테스트 깃허브 액션
+      마지막 테스트 깃허브 액션
     </h1>
   </div>
 </template>
