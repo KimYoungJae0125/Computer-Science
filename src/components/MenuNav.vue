@@ -11,7 +11,7 @@
 
 <script>
 
-const prefix = process.env.NODE_ENV === 'prod' ? '/Computer-Science' : '';
+const prefix = process.env.NODE_ENV === 'production' ? '/Computer-Science' : '';
 
 const menuList = [
   {
@@ -35,6 +35,8 @@ const menuList = [
 });
 
 console.log(menuList);
+
+console.log(process.env.NODE_ENV);
 
 
 export default {

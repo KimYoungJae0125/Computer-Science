@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-const prefix = process.env.NODE_ENV === 'prod' ? '/Computer-Science' : "";
+const prefix = process.env.NODE_ENV === 'production' ? '/Computer-Science' : "";
 
 export default new VueRouter({
     mode: 'history',
