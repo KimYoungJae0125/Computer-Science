@@ -9,19 +9,22 @@ export default new VueRouter({
     mode: 'history',
     routes: [
         {
-            path: `${prefix}/`,
+            path: '/',
             name: 'home',
             component: () => import('@/pages/MainPage.vue')
         },
         {
-            path: `${prefix}/data-structure`,
+            path: '/data-structure',
             name: 'data structure',
             component: () => import('@/pages/DataStructurePage.vue')
         },
         {
-            path: `${prefix}/algorithm`,
+            path: '/algorithm',
             name: 'algorithm',
             component: () => import('@/pages/AlgorithmPage.vue')
         },
-    ]
+    ].map(route => {
+        route.path = prefix + route.path;
+        return route;
+    })
 })

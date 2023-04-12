@@ -17,19 +17,25 @@ const menuList = [
   {
     id: 1,
     title: '메인 메뉴',
-    link: `${prefix}/`
+    link: '/'
   },
   {
     id: 2,
     title: '자료구조',
-    link: `${prefix}/data-structure`
+    link: '/data-structure'
   },
   {
     id: 3,
     title: '알고리즘',
-    link: `${prefix}/algorithm`
+    link: '/algorithm'
   }
-]
+].map(menu => {
+  menu['link'] = prefix+menu['link'];
+  return menu;
+});
+
+console.log(menuList);
+
 
 export default {
   name: 'MenuNav',
