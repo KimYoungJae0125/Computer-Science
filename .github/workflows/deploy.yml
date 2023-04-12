@@ -38,7 +38,7 @@ jobs:
         id: current_time
         run: |
            sudo timedatectl set-timezone Asia/Seoul
-           echo 'NOW=$(date "+%Y-%m-%d_%H시_%M분_%S초")' >> '${GITHUB_OUTPUT}'
+           echo 'COMMIT_TIMES=$(date "+%Y-%m-%d_%H시_%M분_%S초")' >> '${GITHUB_OUTPUT}'
 
 
       - name: Deploy(Push in github page repository)
@@ -48,5 +48,5 @@ jobs:
           publish_dir: ./dist
           user_name: 'kyj'
           user_email: 'uni0125@naver.com'
-          commit_message: 'Update ${{ steps.current_time.outputs.NOW }}'
+          commit_message: 'Update ${{ steps.current_time.outputs.COMMIT_TIMES }}'
 
