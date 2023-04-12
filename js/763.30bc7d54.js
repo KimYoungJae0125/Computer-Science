@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkcomputer_science_vue"]=self["webpackChunkcomputer_science_vue"]||[]).push([[763],{763:function(e,n,t){t.r(n),t.d(n,{default:function(){return a}});var u=function(){var e=this;e._self._c;return e._m(0)},s=[function(){var e=this,n=e._self._c;return n("div",{staticClass:"hello"},[n("h1",[e._v("메인페이지")])])}],c={name:"MainPage",props:{msg:String}},r=c,i=t(1001),l=(0,i.Z)(r,u,s,!1,null,"71d5d256",null),a=l.exports}}]);
-//# sourceMappingURL=763.30bc7d54.js.map
