@@ -9,7 +9,7 @@
     "lint": "vue-cli-service lint",
     "yarn:ci": "yarn install --immutable --immutable-cache --check-cache",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "clean": "gh-pages-clean"
   },
   "dependencies": {

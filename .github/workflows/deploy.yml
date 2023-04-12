@@ -34,19 +34,5 @@ jobs:
       - name: Install dependencies
         run: yarn yarn:ci
 
-      - name: Setting timezone
-        id: current_time
-        run: |
-           sudo timedatectl set-timezone Asia/Seoul
-           echo 'COMMIT_TIMES=$(date "+%Y-%m-%d_%H시_%M분_%S초")' >> '${GITHUB_OUTPUT}'
-
-
       - name: Deploy(Push in github page repository)
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.MY_GITHUB_TOKEN }}
-          publish_dir: ./dist
-          user_name: 'kyj'
-          user_email: 'uni0125@naver.com'
-          commit_message: "Update ${{ steps.current_time.outputs.COMMIT_TIMES }}"
-
+        run: yarn deploy
