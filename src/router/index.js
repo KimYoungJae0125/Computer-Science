@@ -2,10 +2,10 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import AlgorithmPage from '@/pages/AlgorithmPage.vue'
 import DataStructurePage from '@/pages/DataStructurePage.vue'
+import getPath from '@/utils/CommonUtils'
+
 
 Vue.use(VueRouter);
-
-const prefix = process.env.NODE_ENV === 'production' ? '/Computer-Science' : "";
 
 export default new VueRouter({
     mode: 'history',
@@ -36,7 +36,7 @@ export default new VueRouter({
         },
     ].map(route => {
         if(route.name !== 'notFound')
-        route.path = prefix + route.path;
+            route.path = getPath(route.path);
         return route;
     })
 })

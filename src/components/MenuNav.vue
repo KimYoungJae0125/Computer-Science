@@ -11,7 +11,7 @@
 
 <script>
 
-const prefix = process.env.NODE_ENV === 'production' ? '/Computer-Science' : '';
+import getPath from '@/utils/CommonUtils'
 
 const menuList = [
   {
@@ -30,7 +30,8 @@ const menuList = [
     link: '/algorithm'
   }
 ].map(menu => {
-  menu.link  = menu.link !== '/' ? `${prefix}/menu${menu.link}` : prefix+menu.link;
+  menu.link  = menu.link !== '/' ? getPath(`/menu${menu.link}`) : getPath(menu.link);
+  console.log(menu.link)
   return menu;
 });
 
