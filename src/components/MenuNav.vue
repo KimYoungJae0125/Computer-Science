@@ -11,7 +11,7 @@
 
 <script>
 
-const prefix = process.env.NODE_ENV === 'product' ? '/Computer-Science' : '';
+const prefix = process.env.NODE_ENV === 'production' ? '/Computer-Science' : '';
 
 const menuList = [
   {
@@ -30,7 +30,7 @@ const menuList = [
     link: '/algorithm'
   }
 ].map(menu => {
-  menu.link  = menu.link !== '/' ? `/menu${prefix}${menu.link}` : prefix+menu.link;
+  menu.link  = menu.link !== '/' ? `${prefix}/menu${menu.link}` : prefix+menu.link;
   return menu;
 });
 
