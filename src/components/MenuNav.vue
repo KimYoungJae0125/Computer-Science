@@ -28,7 +28,9 @@ const menuList = [
     link: '/algorithm'
   }
 ].map(menu => {
-  menu.link  = menu.link !== '/' ? `/menu${menu.link}` : menu.link;
+  if(menu.link !== '/') {
+    menu.link = `/menu${menu.link}`;
+  }
   return menu;
 });
 
