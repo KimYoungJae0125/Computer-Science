@@ -34,8 +34,15 @@ jobs:
       - name: Install dependencies
         run: yarn yarn:ci
 
+      - name: Build
+        run: yarn build
+
       - name: Deploy(Push in github page repository)
-        run: |
-          git config --global user.name 'kyj'
-          git config --global user.email 'uni0125@naver.com'
-          yarn deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.MY_GITHUB_TOKEN }}
+          publish_dir: ./dist
+          user_name: 'kyj'
+          user_email: 'uni0125@naver.com'
+          commit_message: 'Deploy : '
+
