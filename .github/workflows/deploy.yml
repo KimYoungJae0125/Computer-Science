@@ -1,5 +1,20 @@
 name: vue deploy to github pages
 
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Person"
+        required: true
+        default: "kyj"
+      home:
+        description: "location"
+        required: false
+        default: "GitHubActions"
+        
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -8,7 +23,7 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v3
         with:
-          repository: ${{ secrets.GITHUB_REPOSITORY }}
+          repository: ${{ github.repository }}
           token: ${{ secrets.MY_GITHUB_TOKEN}}
           path: GitHubActions
 
@@ -17,26 +32,16 @@ jobs:
         with:
          node-version: 18.x
 
+      - name: Install dependencies
+        run: yarn yarn:ci
+
       - name: Build
-        uses: borales/actions-yarn@v4
-        run: |
-          yarn yarn:ci
-          yarn build
+        run:  yarn build
         
 
       - name: Deploy(Push in github page repository)
-        run: |
-          cd GitHubActions
-
-          sudo timedatectl set-timezone Asia/Seoul
-
-          NOW=$(date "+%Y-%m-%d_%H시_%M분_%S초")
-
-          sudo rm -rf .gitignore
-
-          git add dist/.
-          git config --global user.email "uni0125@naver.com"
-          git config --global user.name "kyj"
-          git commit -am "Push date is $NOW"
-          git push
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
 
