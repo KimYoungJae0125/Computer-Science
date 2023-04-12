@@ -7,7 +7,7 @@ export default new VueRouter({
     mode: 'history',
     routes: [
         {
-            path: '/',
+            path: '',
             name: 'home',
             component: () => import('@/pages/MainPage.vue')
         },

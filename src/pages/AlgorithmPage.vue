@@ -1,6 +1,6 @@
 <template>
     <div class="hello">
-        <h1>자료구조 테스트</h1>
+        <h1>알고리즘 페이지</h1>
     </div>
   </template>
   

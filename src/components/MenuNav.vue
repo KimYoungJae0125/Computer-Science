@@ -10,11 +10,12 @@
 </template>
 
 <script>
+
 const menuList = [
   {
     id: 1,
     title: '메인 메뉴',
-    link: '/'
+    link: ''
   },
   {
     id: 2,
