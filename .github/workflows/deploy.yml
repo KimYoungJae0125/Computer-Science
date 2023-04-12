@@ -35,4 +35,7 @@ jobs:
         run: yarn yarn:ci
 
       - name: Deploy(Push in github page repository)
-        run: yarn deploy
+        run: |
+          git config --global user.name 'kyj'
+          git config --global user.email 'uni0125@naver.com'
+          yarn deploy
