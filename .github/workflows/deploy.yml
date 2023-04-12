@@ -25,7 +25,6 @@ jobs:
         with:
           repository: ${{ github.repository }}
           token: ${{ secrets.MY_GITHUB_TOKEN}}
-          path: github-pages
 
       - name: Set Node.js 18.x
         uses: actions/setup-node@v3
@@ -33,7 +32,13 @@ jobs:
          node-version: 18.x
 
       - name: Install dependencies
-        run: yarn yarn:ci
+        run: yarn install --immutable --immutable-cache --check-cache
+
+      - name: check
+        run: |
+          echo $(pwd)
+          sudo ls
+          sudo cat package.json
 
       - name: Build
         run:  yarn build
