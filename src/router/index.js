@@ -2,7 +2,6 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import AlgorithmPage from '@/pages/AlgorithmPage.vue'
 import DataStructurePage from '@/pages/DataStructurePage.vue'
-import getPath from '@/utils/CommonUtils'
 
 
 Vue.use(VueRouter);
@@ -34,11 +33,5 @@ export default new VueRouter({
             name: 'notFound',
             component: () => import('@/pages/NotFoundPage.vue')
         },
-    ].map(route => {
-        if(route.name !== 'notFound')
-            route.path = getPath(route.path);
-        return route;
-    })
+    ]
 })
-
-console.log()

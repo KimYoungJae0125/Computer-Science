@@ -11,8 +11,6 @@
 
 <script>
 
-import getPath from '@/utils/CommonUtils'
-
 const menuList = [
   {
     id: 1,
@@ -30,14 +28,9 @@ const menuList = [
     link: '/algorithm'
   }
 ].map(menu => {
-  menu.link  = menu.link !== '/' ? getPath(`/menu${menu.link}`) : getPath(menu.link);
-  console.log(menu.link)
+  menu.link  = menu.link !== '/' ? `/menu${menu.link}` : menu.link;
   return menu;
 });
-
-console.log(menuList);
-
-console.log(process.env.NODE_ENV);
 
 
 export default {
