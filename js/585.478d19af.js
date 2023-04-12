@@ -1,2 +1,2 @@
 "use strict";(self["webpackChunkcomputer_science_vue"]=self["webpackChunkcomputer_science_vue"]||[]).push([[585],{4585:function(e,n,t){t.r(n),t.d(n,{default:function(){return a}});var u=function(){var e=this,n=e._self._c;return n("div",{staticClass:"hello"},[n("h1",[e._v("메인페이지")]),n("router-link",{attrs:{to:"menu"}},[e._v("메뉴")])],1)},r=[],s={name:"MainPage",props:{msg:String}},c=s,i=t(1001),l=(0,i.Z)(c,u,r,!1,null,"110cd977",null),a=l.exports}}]);
-//# sourceMappingURL=585.ff707268.js.map
+//# sourceMappingURL=585.478d19af.js.map
