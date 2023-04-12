@@ -1,14 +1,13 @@
 <template>
     <div class="hello">
-        <h1>메인페이지</h1>
-        <router-link to="menu">메뉴</router-link>
+        <h1>404 Page</h1>
     </div>
   </template>
   
   <script>
 
   export default {
-    name: 'MainPage',
+    name: 'NotFoundPage',
     props: {
       msg: String
     },

@@ -1,5 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import AlgorithmPage from '@/pages/AlgorithmPage.vue'
+import DataStructurePage from '@/pages/DataStructurePage.vue'
 
 Vue.use(VueRouter);
 
@@ -14,17 +16,29 @@ export default new VueRouter({
             component: () => import('@/pages/MainPage.vue')
         },
         {
-            path: '/data-structure',
-            name: 'data structure',
-            component: () => import('@/pages/DataStructurePage.vue')
+            path: '/menu',
+            component: () => import('@/layouts/DefaultLayout.vue'),
+            children: [
+                {
+                    path: 'data-structure',
+                    component: DataStructurePage
+                },
+                {
+                    path: 'algorithm',
+                    component: AlgorithmPage
+                },
+            ]
         },
         {
-            path: '/algorithm',
-            name: 'algorithm',
-            component: () => import('@/pages/AlgorithmPage.vue')
+            path: '/:catchAll(.*)',
+            name: 'notFound',
+            component: () => import('@/pages/NotFoundPage.vue')
         },
     ].map(route => {
+        if(route.name !== 'notFound')
         route.path = prefix + route.path;
         return route;
     })
 })
+
+console.log()

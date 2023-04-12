@@ -1,13 +1,20 @@
 <template>
   <div id="app">
-    <router-view />
+    <MenuNav msg="Welcome to Your Vue.js App"/>
+    <div>
+      <router-view />
+    </div>
   </div>
 </template>
 
 <script>
+import MenuNav from '@/components/MenuNav.vue'
 
 export default {
-  name: 'App',
+  name: 'DefaultLayout',
+  components: {
+    MenuNav
+  }
 }
 </script>
 
