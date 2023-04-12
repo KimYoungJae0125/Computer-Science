@@ -48,5 +48,5 @@ jobs:
           publish_dir: ./public
           user_name: 'kyj'
           user_email: 'uni0125@naver.com'
-          commit_message: 'Update ${{ stpes.current_time.outputs.NOW }}'
+          commit_message: 'Update ${{ steps.current_time.outputs.NOW }}'
 
