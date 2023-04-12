@@ -11,21 +11,23 @@
 
 <script>
 
+const prefix = process.env.NODE_ENV === 'prod' ? '/Computer-Science' : '';
+
 const menuList = [
   {
     id: 1,
     title: '메인 메뉴',
-    link: ''
+    link: `${prefix}/`
   },
   {
     id: 2,
     title: '자료구조',
-    link: '/data-structure'
+    link: `${prefix}/data-structure`
   },
   {
     id: 3,
     title: '알고리즘',
-    link: '/algorithm'
+    link: `${prefix}/algorithm`
   }
 ]
 

@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:prod": "vue-cli-service build --mode prod",
+    "build:prod": "yarn build --mode prod",
     "lint": "vue-cli-service lint",
     "yarn:ci": "yarn install --immutable --immutable-cache --check-cache",
     "predeploy": "yarn build",

@@ -35,7 +35,7 @@ jobs:
         run: yarn yarn:ci
 
       - name: Build
-        run: yarn build
+        run: yarn build:prod
 
       - name: Deploy(Push in github page repository)
         uses: peaceiris/actions-gh-pages@v3
