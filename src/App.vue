@@ -1,20 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <h1>
-      마지막 테스트 깃허브 액션
-    </h1>
+    <MenuNav msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MenuNav from './components/MenuNav.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MenuNav
   }
 }
 </script>

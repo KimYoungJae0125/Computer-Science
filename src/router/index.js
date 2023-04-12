@@ -9,12 +9,17 @@ export default new VueRouter({
         {
             path: '/',
             name: 'home',
-            component: () => import('@/components/MainPage.vue')
+            component: () => import('@/pages/MainPage.vue')
         },
         {
             path: '/data-structure',
             name: 'data structure',
-            component: () => import('@/components/DataStructure.vue')
+            component: () => import('@/pages/DataStructurePage.vue')
+        },
+        {
+            path: '/algorithm',
+            name: 'algorithm',
+            component: () => import('@/pages/AlgorithmPage.vue')
         },
     ]
 })
