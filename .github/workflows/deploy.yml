@@ -13,8 +13,8 @@ on:
       home:
         description: "location"
         required: false
-        default: "GitHubActions"
-        
+        default: "Computer-Science"
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -25,7 +25,7 @@ jobs:
         with:
           repository: ${{ github.repository }}
           token: ${{ secrets.MY_GITHUB_TOKEN}}
-          path: GitHubActions
+          path: github-pages
 
       - name: Set Node.js 18.x
         uses: actions/setup-node@v3
