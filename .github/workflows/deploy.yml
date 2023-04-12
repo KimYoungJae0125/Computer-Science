@@ -48,5 +48,5 @@ jobs:
           publish_dir: ./dist
           user_name: 'kyj'
           user_email: 'uni0125@naver.com'
-          commit_message: 'Update ${{ steps.current_time.outputs.COMMIT_TIMES }}'
+          commit_message: 'Update '${{ steps.current_time.outputs.COMMIT_TIMES }}
 
