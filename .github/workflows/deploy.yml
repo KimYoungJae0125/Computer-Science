@@ -34,12 +34,6 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache --check-cache
 
-      - name: check
-        run: |
-          echo $(pwd)
-          sudo ls
-          sudo cat package.json
-
       - name: Build
         run:  yarn build
         
@@ -47,6 +41,6 @@ jobs:
       - name: Deploy(Push in github page repository)
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.MY_GITHUB_TOKEN }}
           publish_dir: ./dist
 
