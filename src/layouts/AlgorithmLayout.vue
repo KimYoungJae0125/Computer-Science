@@ -16,15 +16,10 @@
 const algorithmList = [
   {
     id: 1,
-    title: 'dfs',
-    link: 'dfs'
+    title: 'dfs/bfs',
+    link: 'dfs-bfs'
     
   },
-  {
-    id: 2,
-    title: 'bfs',
-    link: 'bfs'
-  }
 ].map(menu => {
   menu.link = `/menu/algorithm/${menu.link}`;
   return menu;
@@ -58,9 +53,10 @@ ul {
 }
 li {
   width: 100%;
-  font-size: 3rem;
+  margin-top: 10vh;
+  font-size: 2rem;
 }
 a {
-  color: #42b983;
+  color: #669881;
 }
 </style>

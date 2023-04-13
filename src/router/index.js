@@ -4,7 +4,7 @@ import VueRouter from "vue-router";
 import AlgorithmLayout from '@/layouts/AlgorithmLayout.vue'
 import AlgorithmPage from '@/pages/AlgorithmPage.vue'
 import DataStructurePage from '@/pages/DataStructurePage.vue'
-import DfsPage from '@/pages/algorithm/DfsPage.vue'
+import DfsBfsPage from '@/pages/algorithm/DfsBfsPage.vue'
 
 
 
@@ -39,10 +39,10 @@ export default new VueRouter({
                             }
                         },
                         {
-                            path: 'dfs',
-                            component: DfsPage,
+                            path: 'dfs-bfs',
+                            component: DfsBfsPage,
                             props: {
-                                title: '깊이 우선 탐색(DFS, Depth-First Search)'
+                                title: 'DFS/BFS'
                             }
                         }
                     ]

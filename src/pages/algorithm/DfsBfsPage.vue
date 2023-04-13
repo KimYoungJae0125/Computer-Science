@@ -2,29 +2,25 @@
   <main id="main">
     <div id="wrapper">
       <TitleComponent :title=title />
-      <h2> DFS란?</h2>
-      <h4>최대한 깊이 내려간 뒤, 더 이상 깊이 갈 곳이 없을 경우 옆으로 이동</h4>
-      <div id="descriptionWrapper">
-        <h3>기본 개념</h3>
-        <ul>
-          <li v-for="(description, i) in descriptions" :key="i">
-            {{ description }}
-          </li>
-        </ul>
-      </div>
-      <div style="height: 40vh;">
-        <div id="circleWrapper">
-            <div id="circle1">1</div>
-            <div id="circle2">2</div>
-            <div id="circle3">3</div>
-            <div id="circle4">4</div>
-            <div id="circle5">5</div>
-            <div id="circle6">6</div>
-            <div id="circle7">7</div>
-            <div id="circle8">8</div>
-            <div id="circle9">9</div>
-            <div id="circle10">10</div>
-
+      <DfsBfsComponent title="깊이 우선 탐색(DFS, Depth-First Search)이란?" :descriptions="dfsDescriptions" />
+      <DfsBfsComponent title="너비 우선 탐색(BFS, Breadth-First Search)" :descriptions="bfsDescriptions" />
+      <div>
+        <h3>그림으로 보는 탐색 방법</h3>
+        <button @click="searchDFS()">dfs 탐색</button>
+        <button @click="searchBFS()">bfs 탐색</button>
+        <div style="height: 40vh;">
+          <div id="circleWrapper">
+            <div id="circle1"></div>
+            <div id="circle2"></div>
+            <div id="circle3"></div>
+            <div id="circle4"></div>
+            <div id="circle5"></div>
+            <div id="circle6"></div>
+            <div id="circle7"></div>
+            <div id="circle8"></div>
+            <div id="circle9"></div>
+            <div id="circle10"></div>
+            
             <div id="line1" class="line"></div>
             <div id="line2" class="line"></div>
             <div id="line3" class="line"></div>
@@ -34,8 +30,9 @@
             <div id="line7" class="line"></div>
             <div id="line8" class="line"></div>
             <div id="line9" class="line"></div>
-        </div>
-      </div>  
+          </div>
+        </div>  
+      </div>
     </div>
   </main>
 </template>
@@ -43,25 +40,75 @@
 <script>
 
 import TitleComponent from '@/components/TitleComponent.vue';
+import DfsBfsComponent from '@/components/DfsBfsComponent.vue'
 
-const descriptions = [
-  '시작 노드에서 다음 분기로 넘어가기 전까지 해당 분기를 완벽하게 탐색하는 방식',
-  '끝까지 탐색한 이후에 더 이상 탐색할 수가 없음 다음 장소로 탐색한다.',
-  '끝까지 탐색한 이후에 더 이상 탐색할 수가 없음 다음 장소로 탐색한다.',
+const dfsDescriptions = [
+  '최대한 깊이 내려간 뒤, 더 이상 깊이 갈 곳이 없을 경우 옆으로 이동한다.',
+  '즉, 시작 노드에서 다음 분기로 넘어가기 전까지 해당 분기를 완벽하게 탐색하는 방식',
+  'Stack 자료구조 또는 재귀를 이용하여 구현한다.'
+];
+const bfsDescriptions = [
+  '같은 층을 모두 검색한 다음, 더 이상 갈 수 없으면 다음 층으로 이동',
+  '즉, 시작 노드가 존재하는 모든 층의 노드를 검색 한 후 다음 층으로 검색하여 탐색하는 방식',
+  'Queue 자료구조를 이용하여 구현한다..'
 ];
 
 
 export default {
-  name: 'DfsPage',
+  name: 'DfsBfsPage',
   components: {
-    TitleComponent
+    TitleComponent,
+    DfsBfsComponent
   },  
   props: {
     title: String
   },
   data: () => {
     return {
-      descriptions
+      dfsDescriptions,
+      bfsDescriptions
+    }
+  },
+  methods: {
+    searchDFS: () => {
+        for(let i=1; i<=10; i++) {
+          const circle = document.getElementById(`circle${i}`);
+          if(circle != null) {
+            circle.innerHTML='';
+            circle.classList.remove('search');
+            setTimeout(() => {
+              circle.innerHTML=i;
+              circle.classList.add('search');
+            }, i*500);
+
+          }
+        }
+    },
+    searchBFS: () => {
+        //1
+        //2, 5, 9
+        //3, 6, 8, 10
+        //4, 7
+        const bfs = [
+          [1],
+          [2,5,9],
+          [3,6,8,10],
+          [4,7]
+        ].flat();
+
+        bfs.forEach((v,i) => {
+          i++;
+          const circle = document.getElementById(`circle${v}`);
+          if(circle != null) {
+            circle.innerHTML='';
+            circle.classList.remove('search');
+            setTimeout(() => {
+              circle.innerHTML=i;
+              circle.classList.add('search');
+            }, i*500);
+  
+          }
+        })
     }
   }
 }
@@ -69,6 +116,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
+.search {
+  background-color: aqua;
+}
 
 #main {
   width: 100vw;
@@ -80,10 +131,7 @@ export default {
   width: 70vw;
 }
 
-#descriptionWrapper {
-  margin-left: 10vw;
-  text-align: left;
-}
+
 
 #circleWrapper {
   margin-top: 5vh;
@@ -181,7 +229,7 @@ export default {
     height: 5.9vh;
     margin-top: 30.3vh;
     margin-left: 30vw;
-    transform: rotate(-20deg);
+    transform: rotate(-25deg);
   }
 }
 
