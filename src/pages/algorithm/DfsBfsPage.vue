@@ -40,7 +40,7 @@
 <script>
 
 import TitleComponent from '@/components/TitleComponent.vue';
-import DfsBfsComponent from '@/components/DfsBfsComponent.vue'
+import DfsBfsComponent from '@/components/algorithm/DfsBfsComponent.vue'
 
 const dfsDescriptions = [
   '최대한 깊이 내려간 뒤, 더 이상 깊이 갈 곳이 없을 경우 옆으로 이동한다.',
@@ -79,7 +79,7 @@ export default {
             setTimeout(() => {
               circle.innerHTML=i;
               circle.classList.add('search');
-            }, i*500);
+            }, i*1500);
 
           }
         }
@@ -90,11 +90,18 @@ export default {
         //3, 6, 8, 10
         //4, 7
         const bfs = [
-          [1],
-          [2,5,9],
-          [3,6,8,10],
-          [4,7]
+          [5],
+          [1,6,8],
+          [2,9],
+          [3,7,10],
+          [4]
         ].flat();
+        // const bfs = [
+        //   [1],
+        //   [2,5,9],
+        //   [3,6,8,10],
+        //   [4,7]
+        // ].flat();
 
         bfs.forEach((v,i) => {
           i++;

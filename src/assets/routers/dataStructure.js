@@ -1,5 +1,5 @@
 import DataStructureLayout from '@/layouts/DataStructureLayout'
-import DataStructurePage from '@/pages/DataStructurePage.vue'
+import DataStructurePage from '@/pages/dataStructure/DataStructurePage.vue'
 
 
 const dataStructure = {

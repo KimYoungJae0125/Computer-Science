@@ -1,5 +1,5 @@
 import AlgorithmLayout from '@/layouts/AlgorithmLayout.vue'
-import AlgorithmPage from '@/pages/AlgorithmPage.vue'
+import AlgorithmPage from '@/pages/algorithm/AlgorithmPage.vue'
 import DfsBfsPage from '@/pages/algorithm/DfsBfsPage.vue'
 
 const algorithm =  {
