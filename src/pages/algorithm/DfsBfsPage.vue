@@ -1,8 +1,8 @@
 <template>
   <main>
     <TitleComponent :title=title />
-    <DfsBfsComponent title="깊이 우선 탐색(DFS, Depth-First Search)이란?" :descriptions="dfsDescriptions" />
-    <DfsBfsComponent title="너비 우선 탐색(BFS, Breadth-First Search)" :descriptions="bfsDescriptions" />
+    <DfsComponent ref="dfs" title="깊이 우선 탐색(DFS, Depth-First Search)이란?" />
+    <BfsComponent ref="bfs" title="너비 우선 탐색(BFS, Breadth-First Search)" />
     <div>
       <h3>그림으로 보는 탐색 방법</h3>
       <button @click="searchDFS()">dfs 탐색</button>
@@ -38,83 +38,28 @@
 <script>
 
 import TitleComponent from '@/components/TitleComponent.vue';
-import DfsBfsComponent from '@/components/algorithm/DfsBfsComponent.vue'
-
-const dfsDescriptions = [
-  '최대한 깊이 내려간 뒤, 더 이상 깊이 갈 곳이 없을 경우 옆으로 이동한다.',
-  '즉, 시작 노드에서 다음 분기로 넘어가기 전까지 해당 분기를 완벽하게 탐색하는 방식',
-  'Stack 자료구조 또는 재귀를 이용하여 구현한다.'
-];
-const bfsDescriptions = [
-  '같은 층을 모두 검색한 다음, 더 이상 갈 수 없으면 다음 층으로 이동',
-  '즉, 시작 노드가 존재하는 모든 층의 노드를 검색 한 후 다음 층으로 검색하여 탐색하는 방식',
-  'Queue 자료구조를 이용하여 구현한다..'
-];
+import DfsComponent from '@/components/algorithm/DfsComponent.vue'
+import BfsComponent from '@/components/algorithm/BfsComponent.vue';
 
 
 export default {
   name: 'DfsBfsPage',
   components: {
     TitleComponent,
-    DfsBfsComponent
+    DfsComponent,
+    BfsComponent
   },  
   props: {
     title: String
   },
-  data: () => {
-    return {
-      dfsDescriptions,
-      bfsDescriptions
-    }
-  },
   methods: {
-    searchDFS: () => {
-        for(let i=1; i<=10; i++) {
-          const circle = document.getElementById(`circle${i}`);
-          if(circle != null) {
-            circle.innerHTML='';
-            circle.classList.remove('search');
-            setTimeout(() => {
-              circle.innerHTML=i;
-              circle.classList.add('search');
-            }, i*1500);
-
-          }
-        }
+    searchDFS() {
+      this.$refs.dfs.search()
     },
-    searchBFS: () => {
-        //1
-        //2, 5, 9
-        //3, 6, 8, 10
-        //4, 7
-        const bfs = [
-          [5],
-          [1,6,8],
-          [2,9],
-          [3,7,10],
-          [4]
-        ].flat();
-        // const bfs = [
-        //   [1],
-        //   [2,5,9],
-        //   [3,6,8,10],
-        //   [4,7]
-        // ].flat();
-
-        bfs.forEach((v,i) => {
-          i++;
-          const circle = document.getElementById(`circle${v}`);
-          if(circle != null) {
-            circle.innerHTML='';
-            circle.classList.remove('search');
-            setTimeout(() => {
-              circle.innerHTML=i;
-              circle.classList.add('search');
-            }, i*500);
-  
-          }
-        })
+    searchBFS() {
+      this.$refs.bfs.search()
     }
+
   }
 }
 </script>

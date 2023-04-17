@@ -1,0 +1,71 @@
+<template>
+    <div>
+        <h2>{{ title }}</h2>
+        <DescriptionComponent title="기본 개념" :descriptions="descriptions" />
+    </div>
+</template>
+
+<script>
+import DescriptionComponent from '../DescriptionComponent.vue';
+
+
+const descriptions = [
+  '같은 층을 모두 검색한 다음, 더 이상 갈 수 없으면 다음 층으로 이동',
+  '즉, 시작 노드가 존재하는 모든 층의 노드를 검색 한 후 다음 층으로 검색하여 탐색하는 방식',
+  'Queue 자료구조를 이용하여 구현한다..'
+];
+
+
+export default {
+    name: 'BfsComponent',
+    components: {
+        DescriptionComponent
+    },
+    props: {
+        title: String,
+    },
+    data: () => {
+        return {
+            descriptions
+        }
+    }, 
+    methods: {
+        search: () => {
+        //1
+        //2, 5, 9
+        //3, 6, 8, 10
+        //4, 7
+        const bfs = [
+          [5],
+          [1,6,8],
+          [2,9],
+          [3,7,10],
+          [4]
+        ].flat();
+        // const bfs = [
+        //   [1],
+        //   [2,5,9],
+        //   [3,6,8,10],
+        //   [4,7]
+        // ].flat();
+
+        bfs.forEach((v,i) => {
+          i++;
+          const circle = document.getElementById(`circle${v}`);
+          if(circle != null) {
+            circle.innerHTML='';
+            circle.classList.remove('search');
+            setTimeout(() => {
+              circle.innerHTML=i;
+              circle.classList.add('search');
+            }, i*500);
+  
+          }
+        })
+    }
+    }
+
+}
+
+</script>
+
