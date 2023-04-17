@@ -50,16 +50,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-::v-deep ul {
+::v-deep .menu-ul {
   list-style-type: none;
   padding: 0;
 }
-::v-deep li {
+::v-deep .menu-li {
   display: inline-block;
   margin: 0 10px;
   font-size: 1.5rem;
 }
-::v-deep a {
+::v-deep .menu-a {
   color: #42b983;
 }
 </style>

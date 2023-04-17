@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <MenuNav msg="Welcome to Your Vue.js App"/>
+    <MainMenuComponent />
     <div>
       <router-view />
     </div>
@@ -8,12 +8,12 @@
 </template>
 
 <script>
-import MenuNav from '@/components/MenuNav.vue'
+import MainMenuComponent from '@/components/MainMenuComponent.vue'
 
 export default {
   name: 'DefaultLayout',
   components: {
-    MenuNav
+    MainMenuComponent
   }
 }
 </script>

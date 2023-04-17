@@ -31,16 +31,16 @@ aside {
 h3 {
   margin: 40px 0 0;
 }
-::v-deep ul {
+::v-deep .menu-ul {
   list-style-type: none;
   padding: 0;
 }
-::v-deep li {
+::v-deep .menu-li {
   width: 100%;
   margin-top: 10vh;
   font-size: 2rem;
 }
-::v-deep a {
+::v-deep .menu-a {
   color: #669881;
 }
 </style>
