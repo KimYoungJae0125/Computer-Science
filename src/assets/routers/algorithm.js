@@ -1,11 +1,16 @@
-import AlgorithmLayout from '@/layouts/AlgorithmLayout.vue'
+import algorithmMenu from "@/assets/menus/algorithm.json";
+
+import MainLayout from '@/layouts/MainLayout.vue'
 import AlgorithmPage from '@/pages/algorithm/AlgorithmPage.vue'
 import DfsBfsPage from '@/pages/algorithm/DfsBfsPage.vue'
 
 const algorithm =  {
     path: 'algorithm',
-    component: AlgorithmLayout,
+    component: MainLayout,
     redirect: 'algorithm/main',
+    props: {
+        subMenuList: algorithmMenu
+    },
     children: [
         {
             path: 'main',

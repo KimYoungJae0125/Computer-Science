@@ -1,15 +1,12 @@
 <template>
   <div class="hello">
-    <ul>
-      <li v-for="menu in menuList" :key="menu.id">
-        <router-link :to="menu.link">{{ menu.title }} </router-link>
-      </li>
-
-    </ul>
+    <MenuComponent :menuList="menuList" />
   </div>
 </template>
 
 <script>
+
+import MenuComponent from './MenuComponent.vue';
 
 const menuList = [
   {
@@ -37,6 +34,9 @@ const menuList = [
 
 export default {
   name: 'MenuNav',
+  components: {
+    MenuComponent
+  },
   props: {
     msg: String
   },
@@ -50,18 +50,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
+::v-deep ul {
   list-style-type: none;
   padding: 0;
 }
-li {
+::v-deep li {
   display: inline-block;
   margin: 0 10px;
+  font-size: 1.5rem;
 }
-a {
+::v-deep a {
   color: #42b983;
 }
 </style>
