@@ -13,7 +13,7 @@
 
 <script>
 
-import dataStructureMenu from "@/menus/dataStructure.json";
+import dataStructureMenu from "@/assets/menus/dataStructure.json";
 
 
 const dataStructureList = dataStructureMenu.map(menu => {

@@ -13,7 +13,7 @@
 
 <script>
 
-import algorithmMenu from "@/menus/algorithm.json";
+import algorithmMenu from "@/assets/menus/algorithm.json";
 
 const algorithmList = algorithmMenu.map(menu => {
   menu.link = `/menu/algorithm/${menu.link}`;
