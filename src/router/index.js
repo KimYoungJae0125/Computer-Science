@@ -1,11 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-import AlgorithmLayout from '@/layouts/AlgorithmLayout.vue'
-import DataStructureLayout from '@/layouts/DataStructureLayout'
-import AlgorithmPage from '@/pages/AlgorithmPage.vue'
-import DataStructurePage from '@/pages/DataStructurePage.vue'
-import DfsBfsPage from '@/pages/algorithm/DfsBfsPage.vue'
+import dataStructure from "@/assets/routers/dataStructure";
+import algorithm from "@/assets/routers/algorithm";
 
 
 
@@ -23,38 +20,8 @@ export default new VueRouter({
             path: '/menu',
             component: () => import('@/layouts/DefaultLayout.vue'),
             children: [
-                {
-                    path: 'data-structure',
-                    component: DataStructureLayout,
-                    redirect: 'data-structure/main',
-                    children: [
-                        {
-                            path: 'main',
-                            component: DataStructurePage
-                        }   
-                    ]
-                },
-                {
-                    path: 'algorithm',
-                    component: AlgorithmLayout,
-                    redirect: 'algorithm/main',
-                    children: [
-                        {
-                            path: 'main',
-                            component: AlgorithmPage,
-                            props: {
-                                title: '알고리즘'
-                            }
-                        },
-                        {
-                            path: 'dfs-bfs',
-                            component: DfsBfsPage,
-                            props: {
-                                title: 'DFS/BFS'
-                            }
-                        }
-                    ]
-                },
+                dataStructure,
+                algorithm,
             ]
         },
         {
