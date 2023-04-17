@@ -2,8 +2,8 @@
   <div class="hello">
       <aside>
         <ul>
-          <li v-for="algorithm in algorithmList" :key="algorithm.id">
-            <router-link :to="algorithm.link">{{ algorithm.title }}</router-link>
+          <li v-for="dataStructure in dataStructureList" :key="dataStructure.id">
+            <router-link :to="dataStructure.link">{{ dataStructure.title }}</router-link>
           </li>
         </ul>
       </aside>
@@ -13,21 +13,22 @@
 
 <script>
 
-import algorithmMenu from "@/menus/algorithm.json";
+import dataStructureMenu from "@/menus/dataStructure.json";
 
-const algorithmList = algorithmMenu.map(menu => {
-  menu.link = `/menu/algorithm/${menu.link}`;
+
+const dataStructureList = dataStructureMenu.map(menu => {
+  menu.link = `/menu/data-structure/${menu.link}`;
   return menu;
 });
 
 export default {
-  name: 'AlgorithmLayout',
+  name: 'DataStructureLayout',
   props: {
     title: String
   },
   data: () => {
     return {
-      algorithmList
+      dataStructureList
     }
   },
 }

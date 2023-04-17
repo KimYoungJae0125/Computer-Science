@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 import AlgorithmLayout from '@/layouts/AlgorithmLayout.vue'
+import DataStructureLayout from '@/layouts/DataStructureLayout'
 import AlgorithmPage from '@/pages/AlgorithmPage.vue'
 import DataStructurePage from '@/pages/DataStructurePage.vue'
 import DfsBfsPage from '@/pages/algorithm/DfsBfsPage.vue'
@@ -24,7 +25,14 @@ export default new VueRouter({
             children: [
                 {
                     path: 'data-structure',
-                    component: DataStructurePage
+                    component: DataStructureLayout,
+                    redirect: 'data-structure/main',
+                    children: [
+                        {
+                            path: 'main',
+                            component: DataStructurePage
+                        }   
+                    ]
                 },
                 {
                     path: 'algorithm',
