@@ -1,38 +1,36 @@
 <template>
-  <main id="main">
-    <div id="wrapper">
-      <TitleComponent :title=title />
-      <DfsBfsComponent title="깊이 우선 탐색(DFS, Depth-First Search)이란?" :descriptions="dfsDescriptions" />
-      <DfsBfsComponent title="너비 우선 탐색(BFS, Breadth-First Search)" :descriptions="bfsDescriptions" />
-      <div>
-        <h3>그림으로 보는 탐색 방법</h3>
-        <button @click="searchDFS()">dfs 탐색</button>
-        <button @click="searchBFS()">bfs 탐색</button>
-        <div style="height: 40vh;">
-          <div id="circleWrapper">
-            <div id="circle1"></div>
-            <div id="circle2"></div>
-            <div id="circle3"></div>
-            <div id="circle4"></div>
-            <div id="circle5"></div>
-            <div id="circle6"></div>
-            <div id="circle7"></div>
-            <div id="circle8"></div>
-            <div id="circle9"></div>
-            <div id="circle10"></div>
-            
-            <div id="line1" class="line"></div>
-            <div id="line2" class="line"></div>
-            <div id="line3" class="line"></div>
-            <div id="line4" class="line"></div>
-            <div id="line5" class="line"></div>
-            <div id="line6" class="line"></div>
-            <div id="line7" class="line"></div>
-            <div id="line8" class="line"></div>
-            <div id="line9" class="line"></div>
-          </div>
-        </div>  
-      </div>
+  <main>
+    <TitleComponent :title=title />
+    <DfsBfsComponent title="깊이 우선 탐색(DFS, Depth-First Search)이란?" :descriptions="dfsDescriptions" />
+    <DfsBfsComponent title="너비 우선 탐색(BFS, Breadth-First Search)" :descriptions="bfsDescriptions" />
+    <div>
+      <h3>그림으로 보는 탐색 방법</h3>
+      <button @click="searchDFS()">dfs 탐색</button>
+      <button @click="searchBFS()">bfs 탐색</button>
+      <div style="height: 40vh;">
+        <div id="circleWrapper">
+          <div id="circle1"></div>
+          <div id="circle2"></div>
+          <div id="circle3"></div>
+          <div id="circle4"></div>
+          <div id="circle5"></div>
+          <div id="circle6"></div>
+          <div id="circle7"></div>
+          <div id="circle8"></div>
+          <div id="circle9"></div>
+          <div id="circle10"></div>
+          
+          <div id="line1" class="line"></div>
+          <div id="line2" class="line"></div>
+          <div id="line3" class="line"></div>
+          <div id="line4" class="line"></div>
+          <div id="line5" class="line"></div>
+          <div id="line6" class="line"></div>
+          <div id="line7" class="line"></div>
+          <div id="line8" class="line"></div>
+          <div id="line9" class="line"></div>
+        </div>
+      </div>  
     </div>
   </main>
 </template>

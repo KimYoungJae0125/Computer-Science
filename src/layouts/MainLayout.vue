@@ -3,7 +3,11 @@
       <aside>
         <MenuComponent :menuList="subMenuList" />
       </aside>
-      <router-view />
+      <main id="main">
+        <div id="wrapper">
+          <router-view />
+        </div>
+      </main>
   </div>
 </template>
 
@@ -24,6 +28,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped type="scss">
+#main {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+#wrapper {
+  width: 70vw;
+}
+
+
 aside {
   position: fixed;
   left: 5vw;
