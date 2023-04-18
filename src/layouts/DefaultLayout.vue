@@ -1,9 +1,7 @@
 <template>
-  <div id="app">
+  <div>
     <MainMenuComponent />
-    <div>
-      <router-view />
-    </div>
+    <router-view />
   </div>
 </template>
 

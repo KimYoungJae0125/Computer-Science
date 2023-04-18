@@ -1,12 +1,8 @@
 <template>
-  <div class="hello">
-      <aside>
-        <MenuComponent :menuList="subMenuList" />
-      </aside>
+  <div>
+      <MenuComponent :menuList="subMenuList" />
       <main id="main">
-        <div id="wrapper">
-          <router-view />
-        </div>
+        <router-view />
       </main>
   </div>
 </template>
@@ -27,27 +23,28 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped type="scss">
+<style scoped lang="scss">
 #main {
-  width: 100vw;
+  width: 90vw;
   display: flex;
   justify-content: center;
 }
 
-#wrapper {
+::v-deep #wrapper {
   width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-
-aside {
-  position: fixed;
-  left: 5vw;
-}
 h3 {
   margin: 40px 0 0;
 }
 ::v-deep .menu-ul {
+  position: fixed;
+  left: 5vw;
   list-style-type: none;
+  margin: 0px;
   padding: 0;
 }
 ::v-deep .menu-li {
@@ -57,5 +54,25 @@ h3 {
 }
 ::v-deep .menu-a {
   color: #669881;
+}
+
+@media (max-width:800px) {
+  ::v-deep #wrapper {
+    width: 90vw !important;
+  }
+
+  ::v-deep .menu-ul {
+    width: 100%;
+    height: 50px;
+    left: unset;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    z-index: 9;
+    > li {
+      margin-top: unset;
+    }
+  }
 }
 </style>

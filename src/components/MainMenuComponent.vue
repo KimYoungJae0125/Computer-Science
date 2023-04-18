@@ -1,7 +1,5 @@
 <template>
-  <div class="hello">
-    <MenuComponent :menuList="menuList" />
-  </div>
+  <MenuComponent :menuList="menuList" />
 </template>
 
 <script>

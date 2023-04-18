@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <div id="wrapper">
     <TitleComponent :title=title />
     <DfsComponent ref="dfs" title="깊이 우선 탐색(DFS, Depth-First Search)이란?" />
     <BfsComponent ref="bfs" title="너비 우선 탐색(BFS, Breadth-First Search)" />
@@ -32,7 +32,7 @@
         </div>
       </div>  
     </div>
-  </main>
+  </div>
 </template>
 
 <script>
