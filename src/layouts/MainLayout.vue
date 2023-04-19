@@ -57,6 +57,9 @@ h3 {
 }
 
 @media (max-width:800px) {
+  #main {
+    padding-bottom: 5vh;
+  }
   ::v-deep #wrapper {
     width: 90vw !important;
   }
