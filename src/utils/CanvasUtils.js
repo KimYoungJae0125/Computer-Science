@@ -77,21 +77,32 @@ const drawingGraph = (canvasId, arcInfoList, lineInfoList) => {
     const context = canvasScaling(canvasId);
 
     arcInfoList.forEach(info => drawingCircle(context, info));
+    lineInfoList.filter((v,i) => i<4).forEach(info => drawingLine(context, info))
+}
+
+const drawingDirectedGraph = (canvasId, arcInfoList, lineInfoList) => {
+    const context = canvasScaling(canvasId);
+
+    arcInfoList.forEach(info => drawingCircle(context, info));
+    lineInfoList.filter((v,i) => i<4).forEach(info => drawingArrowLine(context, info))
+}
+const drawingComplteGraph = (canvasId, arcInfoList, lineInfoList) => {
+    const context = canvasScaling(canvasId);
+
+    arcInfoList.forEach(info => drawingCircle(context, info));
     lineInfoList.forEach(info => drawingLine(context, info))
 }
 
-const drawingArrowGraph = (canvasId, arcInfoList, lineInfoList) => {
+const drawingDirectedComplteGraph = (canvasId, arcInfoList, lineInfoList) => {
     const context = canvasScaling(canvasId);
 
-    // lineInfoList = [];
     arcInfoList.forEach(info => drawingCircle(context, info));
-    // arcInfoList.forEach((info, index) => {
-    //     drawingCircle(context, info)
-    //     if(index !== arcInfoList.length -1) {
-    //         lineInfoList.push({startX: info.x, startY: info.y, endX: arcInfoList[index+1].x, endY:arcInfoList[index+1].y})
-    //     }
-    // });
-    lineInfoList.forEach(info => drawingArrowLine(context, info))
+    const reverseLineList = [];
+    lineInfoList.forEach(info => {
+        drawingArrowLine(context, info)
+        reverseLineList.push({startX: info.endX, startY: info.endY, endX: info.startX, endY: info.startY});
+    })
+    reverseLineList.forEach(info => drawingArrowLine(context, info))
 }
 
-export {pathCheck, drawingGraph, drawingArrowGraph};
+export {pathCheck, drawingGraph, drawingDirectedGraph, drawingComplteGraph, drawingDirectedComplteGraph};

@@ -22,5 +22,17 @@
         "startY": 130,
         "endX": 60,
         "endY": 73
+    },
+    {
+        "startX": 110,
+        "startY": 128,
+        "endX": 140,
+        "endY": 73
+    },
+    {
+        "startX": 70,
+        "startY": 65,
+        "endX": 180,
+        "endY": 133
     }
 ]

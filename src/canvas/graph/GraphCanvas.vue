@@ -15,12 +15,3 @@ export default {
 }
 
 </script>
-
-<style scoped>
-#defaultCanvas {
-    position: relative;
-    width: 80vw;
-    height: 30vh;
-    border: 1px solid #ccc;
-}
-</style>

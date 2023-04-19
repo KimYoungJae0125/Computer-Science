@@ -4,6 +4,7 @@
         <GraphComponent />
         <UndirectedGraphComponent />
         <DirectedGraphComponent />
+        <ComplteGraphComponent />
     </div>
 </template>
 
@@ -11,6 +12,7 @@
 import GraphComponent from '@/components/dataStructure/GraphComponent.vue';
 import UndirectedGraphComponent from '@/components/dataStructure/UndirectedGraphComponent.vue';
 import DirectedGraphComponent from '@/components/dataStructure/DirectedGraphComponent.vue';
+import ComplteGraphComponent from '@/components/dataStructure/ComplteGraphComponent.vue';
 
 export default {
     name: "GrapthPage",
@@ -18,6 +20,7 @@ export default {
         GraphComponent,
         UndirectedGraphComponent,
         DirectedGraphComponent,
+        ComplteGraphComponent,
     },
     props: {
         title: String,

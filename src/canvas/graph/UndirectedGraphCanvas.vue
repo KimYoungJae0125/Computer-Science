@@ -1,5 +1,5 @@
 <template>
-    <canvas id="UndirectedCanvas"></canvas>
+    <canvas id="undirectedCanvas"></canvas>
 </template>
 
 <script>
@@ -10,17 +10,8 @@ import lineInfoList from '@/assets/graphs/line.json';
 export default {
     name: "UndirectedGraphCanvas",
     mounted() {
-        drawingGraph('UndirectedCanvas', arcInfoList, lineInfoList);
+        drawingGraph('undirectedCanvas', arcInfoList, lineInfoList);
     }
 }
 
 </script>
-
-<style scoped>
-#UndirectedCanvas {
-    position: relative;
-    width: 80vw;
-    height: 30vh;
-    border: 1px solid #ccc;
-}
-</style>

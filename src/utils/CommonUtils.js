@@ -8,8 +8,6 @@ const isMobile = () => {
         /Windows Phone/i,
     ]
 
-console.log(window.navigator.userAgent)
-
     return mobileRegex.some(mobile => window.navigator.userAgent.match(mobile));
 };
 
