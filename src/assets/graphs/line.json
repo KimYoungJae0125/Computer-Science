@@ -1,0 +1,26 @@
+[
+    {
+        "startX": 75,
+        "startY": 50,
+        "endX": 125,
+        "endY": 50
+    },
+    {
+        "startX": 165,
+        "startY": 70,
+        "endX": 195,
+        "endY": 125
+    },
+    {
+        "startX": 175,
+        "startY": 150,
+        "endX": 125,
+        "endY": 150
+    },
+    {
+        "startX": 85,
+        "startY": 130,
+        "endX": 60,
+        "endY": 73
+    }
+]

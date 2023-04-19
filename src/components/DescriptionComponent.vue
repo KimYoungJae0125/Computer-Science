@@ -1,5 +1,5 @@
 <template>
-    <div id="descriptionWrapper">
+    <div>
         <h3>{{ title }}</h3>
         <ul>
             <li v-for="(description, index) in descriptions" :key="index">
@@ -22,8 +22,8 @@ export default {
 
 <style scoped>
 
-#descriptionWrapper {
-  margin-left: 10vw;
+div {
+  margin-left: 17vw;
   text-align: left;
 }
 
@@ -33,7 +33,7 @@ li {
 }
 
 @media (max-width: 800px) {
-    #descriptionWrapper {
+    div {
         margin-left: unset;
     }
 }
