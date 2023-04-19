@@ -68,7 +68,7 @@ const drawingArrowLine = (context, lineLocationInfo) => {
 
     context.fill();
     // context.setTransform(1, 0, 0, 1, 0, 0);
-    const scalingValue = isMobile() ? 3 : 2;
+    const scalingValue = isMobile() ? 2.7 : 2;
     context.setTransform(scalingValue, 0, 0, scalingValue, 0, 0);
     // context.closePath();
 }
