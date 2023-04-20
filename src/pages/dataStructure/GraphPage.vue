@@ -15,7 +15,7 @@ import DirectedGraphComponent from '@/components/dataStructure/graph/DirectedGra
 import ComplteGraphComponent from '@/components/dataStructure/graph/ComplteGraphComponent.vue';
 
 export default {
-    name: "GrapthPage",
+    name: "GraphPage",
     components: {
         GraphComponent,
         UndirectedGraphComponent,
