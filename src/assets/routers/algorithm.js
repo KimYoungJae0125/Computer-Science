@@ -1,7 +1,7 @@
 import algorithmMenu from "@/assets/menus/algorithm.json";
 
 import MainLayout from '@/layouts/MainLayout.vue'
-import AlgorithmPage from '@/pages/algorithm/AlgorithmPage.vue'
+import MainPage from '@/pages/MainPage.vue'
 import DfsBfsPage from '@/pages/algorithm/DfsBfsPage.vue'
 
 const algorithm =  {
@@ -14,7 +14,7 @@ const algorithm =  {
     children: [
         {
             path: 'main',
-            component: AlgorithmPage,
+            component: MainPage,
             props: {
                 title: '알고리즘'
             }

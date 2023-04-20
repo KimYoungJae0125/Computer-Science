@@ -31,12 +31,9 @@ const menuList = [
 
 
 export default {
-  name: 'MenuNav',
+  name: 'MainMenuComponent',
   components: {
     MenuComponent
-  },
-  props: {
-    msg: String
   },
   data: () => {
     return {
@@ -47,17 +44,16 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-::v-deep .menu-ul {
+<style scoped lang="scss">
+::v-deep .router-link-active {
+  color: #369635;
+  text-decoration: underline;
+}
+ul {
   list-style-type: none;
-  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.7rem;
 }
-::v-deep .menu-li {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 1.5rem;
-}
-::v-deep .menu-a {
-  color: #42b983;
-}
+
 </style>

@@ -48,16 +48,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
-.search {
-  background-color: aqua;
-}
-
-#main {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-}
-
 #wrapper {
   width: 70vw;
 }

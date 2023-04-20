@@ -4,8 +4,6 @@ import VueRouter from "vue-router";
 import dataStructure from "@/assets/routers/dataStructure";
 import algorithm from "@/assets/routers/algorithm";
 
-
-
 Vue.use(VueRouter);
 
 export default new VueRouter({
@@ -14,11 +12,12 @@ export default new VueRouter({
         {
             path: '/',
             name: 'home',
-            component: () => import('@/pages/MainPage.vue')
+            component: () => import('@/pages/DefaultPage.vue')
         },
         {
             path: '/menu',
             component: () => import('@/layouts/DefaultLayout.vue'),
+            redirect: '/menu/data-structure',
             children: [
                 dataStructure,
                 algorithm,

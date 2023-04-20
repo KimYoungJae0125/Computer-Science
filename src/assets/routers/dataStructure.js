@@ -1,7 +1,7 @@
 import dataStructureMenu from "@/assets/menus/dataStructure.json";
 
 import MainLayout from '@/layouts/MainLayout.vue'
-import DataStructurePage from '@/pages/dataStructure/DataStructurePage.vue'
+import MainPage from '@/pages/MainPage.vue'
 import GraphPage from '@/pages/dataStructure/GraphPage.vue'
 
 
@@ -15,7 +15,10 @@ const dataStructure = {
     children: [
         {
             path: 'main',
-            component: DataStructurePage
+            component: MainPage,
+            props: {
+                title: '자료구조'
+            }
         },
         {
             path: 'graph',

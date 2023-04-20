@@ -40,20 +40,21 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
+::v-deep .router-link-active {
+  color: #34c4ac;
+  text-decoration: underline;
+}
 ::v-deep .menu-ul {
   position: fixed;
   left: 5vw;
   list-style-type: none;
   margin: 0px;
   padding: 0;
-}
-::v-deep .menu-li {
-  width: 100%;
-  margin-top: 10vh;
-  font-size: 2rem;
-}
-::v-deep .menu-a {
-  color: #669881;
+  > li {
+    width: 100%;
+    margin-top: 10vh;
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width:800px) {
@@ -64,7 +65,7 @@ h3 {
     width: 90vw !important;
   }
 
-  ::v-deep .menu-ul {
+  ::v-deep ul {
     width: 100%;
     height: 50px;
     left: unset;
