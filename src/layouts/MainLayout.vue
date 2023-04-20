@@ -24,8 +24,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+div {
+  display: flex;
+  justify-content: center;
+}
 #main {
-  width: 90vw;
+  width: 100vw;
   display: flex;
   justify-content: center;
 }
@@ -61,11 +65,8 @@ h3 {
   #main {
     padding-bottom: 5vh;
   }
-  ::v-deep #wrapper {
-    width: 90vw !important;
-  }
 
-  ::v-deep ul {
+  ::v-deep .menu-ul {
     width: 100%;
     height: 50px;
     left: unset;

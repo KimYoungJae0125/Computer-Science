@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="wrapper">
         <h2>{{ title }}</h2>
         <GraphComponent />
         <UndirectedGraphComponent />
