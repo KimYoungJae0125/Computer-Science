@@ -1,4 +1,3 @@
-import { isMobile } from "./CommonUtils";
 
 const pathCheck = (path) => 
     window.location.href.indexOf(path) !== -1 && window.location.href.indexOf(path) === window.location.href.lastIndexOf(path);
@@ -68,8 +67,9 @@ const drawingArrowLine = (context, lineLocationInfo) => {
 
     context.fill();
     // context.setTransform(1, 0, 0, 1, 0, 0);
-    const scalingValue = isMobile() ? 2.8 : 2;
-    context.setTransform(scalingValue, 0, 0, scalingValue, 0, 0);
+    const dpr = window.devicePixelRatio;
+
+    context.setTransform(dpr, 0, 0, dpr, 0, 0);
     // context.closePath();
 }
 
@@ -105,4 +105,10 @@ const drawingDirectedComplteGraph = (canvasId, arcInfoList, lineInfoList) => {
     reverseLineList.forEach(info => drawingArrowLine(context, info))
 }
 
-export {pathCheck, drawingGraph, drawingDirectedGraph, drawingComplteGraph, drawingDirectedComplteGraph};
+const setTransform = (canvasId, scalingRatio) => {
+    const context = document.getElementById(canvasId).getContext('2d');
+
+    context.setTransform(scalingRatio, 0, 0, scalingRatio, 0, 0);
+}
+
+export {pathCheck, drawingGraph, drawingDirectedGraph, drawingComplteGraph, drawingDirectedComplteGraph, setTransform};
