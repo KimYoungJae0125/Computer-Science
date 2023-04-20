@@ -21,21 +21,12 @@ export default {
 </script>
 
 <style scoped>
-
 div {
-  margin-left: 17vw;
-  text-align: left;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    text-align: left;
 }
-
-li {
-    margin-left: -10px;
-    width: 95%;
+ul {
+    padding-top: 1vh;
 }
-
-@media (max-width: 800px) {
-    div {
-        margin-left: unset;
-    }
-}
-
 </style>

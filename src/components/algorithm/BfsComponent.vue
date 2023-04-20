@@ -28,44 +28,17 @@ export default {
         return {
             descriptions
         }
-    }, 
-    methods: {
-        search: () => {
-        //1
-        //2, 5, 9
-        //3, 6, 8, 10
-        //4, 7
-        const bfs = [
-          [5],
-          [1,6,8],
-          [2,9],
-          [3,7,10],
-          [4]
-        ].flat();
-        // const bfs = [
-        //   [1],
-        //   [2,5,9],
-        //   [3,6,8,10],
-        //   [4,7]
-        // ].flat();
-
-        bfs.forEach((v,i) => {
-          i++;
-          const circle = document.getElementById(`circle${v}`);
-          if(circle != null) {
-            circle.innerHTML='';
-            circle.classList.remove('search');
-            setTimeout(() => {
-              circle.innerHTML=i;
-              circle.classList.add('search');
-            }, i*500);
-  
-          }
-        })
     }
-    }
-
 }
 
 </script>
+
+<style scoped>
+div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>
 

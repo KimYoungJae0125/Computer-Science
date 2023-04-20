@@ -1,7 +1,9 @@
 <template>
     <div>
-        <canvas id="complteCanvas"></canvas>
-        <canvas id="directedComplteCanvas"></canvas>
+        <div>
+            <canvas id="complteCanvas"></canvas>
+            <canvas id="directedComplteCanvas"></canvas>
+        </div>
     </div>
 </template>
 

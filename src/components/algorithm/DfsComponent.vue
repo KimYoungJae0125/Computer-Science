@@ -26,25 +26,17 @@ export default {
         return {
             descriptions
         }
-    }, 
-    methods : {
-        search: () => {
-            for(let i=1; i<=10; i++) {
-                const circle = document.getElementById(`circle${i}`);
-                if(circle != null) {
-                    circle.innerHTML='';
-                    circle.classList.remove('search');
-                    setTimeout(() => {
-                    circle.innerHTML=i;
-                    circle.classList.add('search');
-                    }, i*1500);
-
-                }
-            }
-        }
     }
 
 }
 
 </script>
+
+<style scoped>
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>
 

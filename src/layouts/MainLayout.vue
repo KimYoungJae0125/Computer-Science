@@ -29,6 +29,7 @@ div {
   justify-content: center;
 }
 #main {
+  padding-top: 2vh;
   width: 100vw;
   display: flex;
   justify-content: center;
