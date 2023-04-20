@@ -30,7 +30,6 @@ export default {
 
 <style scoped>
 div {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

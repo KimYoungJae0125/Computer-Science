@@ -29,4 +29,7 @@ div {
 ul {
     padding-top: 1vh;
 }
+li {
+    max-width: 500px;
+}
 </style>
