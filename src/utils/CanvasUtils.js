@@ -115,7 +115,7 @@ const drawingDirectedComplteGraph = (canvasId, arcInfoList, lineInfoList) => {
 }
 
 const drawingTree = (canvasId, arcInfoList, lineInfoList) => {
-    const context = canvasScaling(canvasId, [350, 1000]);
+    const context = canvasScaling(canvasId, [300, 1000]);
 
     arcInfoList.forEach(info => drawingCircle(context, info));
     lineInfoList.forEach(info => drawingLine(context, info));

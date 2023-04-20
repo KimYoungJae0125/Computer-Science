@@ -1,56 +1,56 @@
 [
     {
-        "startX": 155,
+        "startX": 130,
         "startY": 95,
-        "endX": 80,
-        "endY": 175
-    },
-    {
-        "startX": 175,
-        "startY": 105,
-        "endX": 175,
-        "endY": 175
-    },
-    {
-        "startX": 195,
-        "startY": 95,
-        "endX": 270,
-        "endY": 175
-    },
-    {
-        "startX": 70,
-        "startY": 225,
         "endX": 55,
-        "endY": 295
+        "endY": 175
+    },
+    {
+        "startX": 150,
+        "startY": 105,
+        "endX": 150,
+        "endY": 175
     },
     {
         "startX": 170,
+        "startY": 95,
+        "endX": 245,
+        "endY": 175
+    },
+    {
+        "startX": 45,
         "startY": 225,
-        "endX": 145,
+        "endX": 30,
         "endY": 295
     },
     {
-        "startX": 180,
+        "startX": 145,
         "startY": 225,
-        "endX": 215,
+        "endX": 120,
         "endY": 295
     },
     {
-        "startX": 285,
-        "startY": 222,
-        "endX": 305,
+        "startX": 155,
+        "startY": 225,
+        "endX": 190,
         "endY": 295
     },
     {
-        "startX": 50,
+        "startX": 255,
+        "startY": 225,
+        "endX": 270,
+        "endY": 295
+    },
+    {
+        "startX": 25,
         "startY": 345,
-        "endX": 50,
+        "endX": 25,
         "endY": 415
     },
     {
-        "startX": 140,
+        "startX": 115,
         "startY": 345,
-        "endX": 140,
+        "endX": 115,
         "endY": 415
     }
 ]
