@@ -1,4 +1,3 @@
-
 const pathCheck = (path) => 
     window.location.href.indexOf(path) !== -1 && window.location.href.indexOf(path) === window.location.href.lastIndexOf(path);
 

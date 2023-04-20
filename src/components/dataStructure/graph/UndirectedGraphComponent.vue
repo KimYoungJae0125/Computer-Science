@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import DescriptionComponent from '../DescriptionComponent.vue';
+import DescriptionComponent from '@/components/DescriptionComponent.vue';
 import UndirectedGraphCanvas from '@/canvas/graph/UndirectedGraphCanvas.vue';
 
 const descriptions = [

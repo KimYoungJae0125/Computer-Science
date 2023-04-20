@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import GraphComponent from '@/components/dataStructure/GraphComponent.vue';
-import UndirectedGraphComponent from '@/components/dataStructure/UndirectedGraphComponent.vue';
-import DirectedGraphComponent from '@/components/dataStructure/DirectedGraphComponent.vue';
-import ComplteGraphComponent from '@/components/dataStructure/ComplteGraphComponent.vue';
+import GraphComponent from '@/components/dataStructure/graph/GraphComponent.vue';
+import UndirectedGraphComponent from '@/components/dataStructure/graph/UndirectedGraphComponent.vue';
+import DirectedGraphComponent from '@/components/dataStructure/graph/DirectedGraphComponent.vue';
+import ComplteGraphComponent from '@/components/dataStructure/graph/ComplteGraphComponent.vue';
 
 export default {
     name: "GrapthPage",
