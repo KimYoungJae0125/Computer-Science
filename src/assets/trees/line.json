@@ -1,0 +1,56 @@
+[
+    {
+        "startX": 130,
+        "startY": 95,
+        "endX": 55,
+        "endY": 175
+    },
+    {
+        "startX": 150,
+        "startY": 105,
+        "endX": 150,
+        "endY": 175
+    },
+    {
+        "startX": 170,
+        "startY": 95,
+        "endX": 245,
+        "endY": 175
+    },
+    {
+        "startX": 45,
+        "startY": 225,
+        "endX": 30,
+        "endY": 295
+    },
+    {
+        "startX": 145,
+        "startY": 225,
+        "endX": 120,
+        "endY": 295
+    },
+    {
+        "startX": 155,
+        "startY": 225,
+        "endX": 190,
+        "endY": 295
+    },
+    {
+        "startX": 260,
+        "startY": 222,
+        "endX": 280,
+        "endY": 295
+    },
+    {
+        "startX": 25,
+        "startY": 345,
+        "endX": 25,
+        "endY": 415
+    },
+    {
+        "startX": 115,
+        "startY": 345,
+        "endX": 115,
+        "endY": 415
+    }
+]
