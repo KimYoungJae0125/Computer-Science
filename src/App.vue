@@ -18,6 +18,7 @@ export default {
 
   --normal-font-color: #C2BFAF;
   --active-font-color: #beaa3d;
+  --description-font-color: #c2bfafbe;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

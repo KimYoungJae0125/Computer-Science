@@ -31,6 +31,7 @@ ul {
 }
 li {
     max-width: 500px;
+    color: var(--description-font-color) !important;
 }
 
 @media (max-width:800px) {
