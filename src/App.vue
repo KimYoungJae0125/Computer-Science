@@ -36,5 +36,11 @@ a {
   color: var(--normal-font-color);
   text-decoration: none;
 }
+button {
+  width: 100px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 5px;
+}
 
 </style>
