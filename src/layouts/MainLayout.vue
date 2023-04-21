@@ -43,7 +43,7 @@ export default {
 }
 
 ::v-deep #wrapper {
-  width: 60vw;
+  width: 50vw;
   min-height: 100vh;
   // width: 100%;
   flex-direction: column;
@@ -58,16 +58,16 @@ h3 {
 }
 ::v-deep .menu-ul {
   position: fixed;
-  left: 3vw;
-  width: 15vw;
+  left: 7vw;
+  min-width: 15vw;
   list-style-type: none;
-  background-color: var(--secondary-background-color);
+  // background-color: var(--secondary-background-color);
   // min-height: 100vh;
 
   margin-top: 10vh;
   > li {
     padding: 5px;
-    width: 100%;
+    min-width: 10vw;
     // margin-top: 10vh;
     font-size: 1.3rem;
   }
@@ -78,10 +78,6 @@ h3 {
   #main {
     padding-top: unset;
   }
-  ::v-deep .menu-ul {
-    // display: none;
-  }
-
   ::v-deep #wrapper {
     width: 100vw;
   }
