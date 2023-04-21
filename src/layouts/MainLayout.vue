@@ -28,31 +28,30 @@ div {
   display: flex;
   justify-content: center;
 }
+#main, ::v-deep #wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: var(--secondary-background-color);
+}
+
 #main {
   // position: fixed;
   padding-top: 2vh;
   width: 100vw;
-  display: flex;
-  justify-content: center;
   align-items: flex-start;
-  background-color: #07252D;
   height: 100vh;
 }
 
 ::v-deep #wrapper {
   // width: 70vw;
-  width: 100vw;
-  display: flex;
+  width: 100%;
   flex-direction: column;
-  justify-content: center;
-  background-color: #07252D;
 }
 
 h3 {
   margin: 40px 0 0;
 }
 ::v-deep .router-link-active {
-  color: #34c4ac;
   text-decoration: underline;
 }
 ::v-deep .menu-ul {
@@ -64,7 +63,7 @@ h3 {
   > li {
     width: 100%;
     margin-top: 10vh;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -80,7 +79,6 @@ h3 {
     bottom: 0;
     display: flex;
     justify-content: space-around;
-    background-color: white;
     z-index: 9;
     > li {
       margin-top: unset;

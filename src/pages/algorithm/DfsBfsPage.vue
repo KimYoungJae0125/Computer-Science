@@ -7,7 +7,7 @@
       <h3>그림으로 보는 탐색 방법</h3>
       <button @click="searchDFS()">dfs 탐색</button>
       <button @click="searchBFS()">bfs 탐색</button>
-      <div style="height: 40vh;">
+      <div>
         <TreeCanvas ref="tree" />
       </div>  
     </div>

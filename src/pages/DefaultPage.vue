@@ -1,7 +1,6 @@
 <template>
-    <div class="hello">
-        <h1>메인페이지</h1>
-        <router-link to="menu">메뉴</router-link>
+    <div>
+        <h1><router-link to="menu">공부하러 가기</router-link></h1>
     </div>
   </template>
   
@@ -18,7 +17,14 @@
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
   a {
-    color: #42b983;
+    color: var(--active-font-color);
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    height: 100vh;
   }
   </style>
   

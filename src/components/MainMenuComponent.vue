@@ -46,7 +46,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 ::v-deep .router-link-active {
-  color: #369635;
+  color: var(--active-font-color);
+  font-size:1.7rem;
   text-decoration: underline;
 }
 ul {
@@ -58,13 +59,7 @@ ul {
   // background-color: #000000b0;
   // background-color: #000000;
   // opacity: 0.6;
-  height: 50px;
-}
-::v-deep li:nth-child(1) {
-  flex-grow: 0.1;
-}
-::v-deep li:not(:nth-child(1)) {
-  flex-grow: 0.5;
+  height: 70px;
 }
 
 </style>

@@ -19,9 +19,9 @@ const canvasScaling = (canvasId, size) => {
     const context = canvas.getContext('2d');
 
     const dpr = window.devicePixelRatio;
+    // canvas.width = width * dpr;
     canvas.width = width * dpr;
     canvas.height = height * dpr;
-    canvas.style.backGroundColor = '#07252D'
 
     context.scale(dpr, dpr);
 

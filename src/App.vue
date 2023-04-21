@@ -12,8 +12,12 @@ export default {
 </script>
 
 <style>
-html, body {
-  height: 100%;
+:root {
+  --primary-background-color:black;
+  --secondary-background-color: #07252D;
+
+  --normal-font-color: #C2BFAF;
+  --active-font-color: #beaa3d;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -21,8 +25,8 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   /* color: #2c3e50; */
-  color: #C2BFAF;
-  background-color: black;
+  color: var(--normal-font-color);
+  background-color: var(--primary-background-color);
 }
 * {
   margin: 0;
