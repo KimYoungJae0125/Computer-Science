@@ -33,7 +33,7 @@ export default {
   padding: 0;
 }
 a {
-  color: rgb(230, 232, 216);
+  color: var(--normal-font-color);
   text-decoration: none;
 }
 
