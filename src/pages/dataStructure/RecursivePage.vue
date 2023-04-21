@@ -1,16 +1,18 @@
 <template>
     <div id="wrapper">
-        <h2>{{ title }}</h2>
+        <TitleComponent :title="title" />
         <RecursiveComponent />
     </div>
 </template>
 
 <script>
+import TitleComponent from '@/components/TitleComponent.vue';
 import RecursiveComponent from '@/components/dataStructure/recursive/RecursiveComponent.vue';
 
 export default {
     name: "RecursivePage",
     components: {
+        TitleComponent,
         RecursiveComponent,
     },
     props: {

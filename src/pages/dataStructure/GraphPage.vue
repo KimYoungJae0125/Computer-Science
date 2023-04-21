@@ -1,6 +1,6 @@
 <template>
     <div id="wrapper">
-        <h2>{{ title }}</h2>
+        <TitleComponent :title=title />
         <GraphComponent />
         <UndirectedGraphComponent />
         <DirectedGraphComponent />
@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import TitleComponent from '@/components/TitleComponent.vue';
+
 import GraphComponent from '@/components/dataStructure/graph/GraphComponent.vue';
 import UndirectedGraphComponent from '@/components/dataStructure/graph/UndirectedGraphComponent.vue';
 import DirectedGraphComponent from '@/components/dataStructure/graph/DirectedGraphComponent.vue';
@@ -17,6 +19,7 @@ import ComplteGraphComponent from '@/components/dataStructure/graph/ComplteGraph
 export default {
     name: "GraphPage",
     components: {
+        TitleComponent,
         GraphComponent,
         UndirectedGraphComponent,
         DirectedGraphComponent,

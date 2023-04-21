@@ -1,15 +1,15 @@
 <template>
-  <div>
-      <MenuComponent :menuList="subMenuList" />
-      <main id="main">
-        <router-view />
-      </main>
-  </div>
+  <main id="main">
+    <MenuComponent :menuList="subMenuList"/>
+    <router-view />
+  </main>
 </template>
 
 <script>
 
 import MenuComponent from '@/components/MenuComponent.vue';
+
+import { isMobile } from '@/utils/CommonUtils';
 
 export default {
   name: 'MainLayout',
@@ -19,33 +19,35 @@ export default {
   props: {
     subMenuList: Array
   },
+  data: () => {
+    return {
+      isMobile: isMobile()
+    }
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-div {
-  display: flex;
-  justify-content: center;
-}
 #main, ::v-deep #wrapper {
   display: flex;
-  justify-content: center;
   background-color: var(--secondary-background-color);
 }
 
 #main {
-  // position: fixed;
   padding-top: 2vh;
-  width: 100vw;
+  width: 100%;
   align-items: flex-start;
-  height: 100vh;
+  justify-content: center;
+  // min-height: 100vh;
 }
 
 ::v-deep #wrapper {
-  // width: 70vw;
-  width: 100%;
+  width: 60vw;
+  min-height: 100vh;
+  // width: 100%;
   flex-direction: column;
+  border: 1px solid #ccc;
 }
 
 h3 {
@@ -56,33 +58,33 @@ h3 {
 }
 ::v-deep .menu-ul {
   position: fixed;
-  left: 5vw;
+  left: 3vw;
+  width: 15vw;
   list-style-type: none;
-  margin: 0px;
-  padding: 0;
+  background-color: var(--secondary-background-color);
+  // min-height: 100vh;
+
+  margin-top: 10vh;
   > li {
+    padding: 5px;
     width: 100%;
-    margin-top: 10vh;
+    // margin-top: 10vh;
     font-size: 1.3rem;
   }
 }
 
 @media (max-width:800px) {
+
   #main {
-    padding-bottom: 5vh;
+    padding-top: unset;
+  }
+  ::v-deep .menu-ul {
+    // display: none;
   }
 
-  ::v-deep .menu-ul {
-    width: 100%;
-    height: 50px;
-    left: unset;
-    bottom: 0;
-    display: flex;
-    justify-content: space-around;
-    z-index: 9;
-    > li {
-      margin-top: unset;
-    }
+  ::v-deep #wrapper {
+    width: 100vw;
   }
+
 }
 </style>

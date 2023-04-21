@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="wrapper">
     <TitleComponent :title=title />
   </div>
 </template>

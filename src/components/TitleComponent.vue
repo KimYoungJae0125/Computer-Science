@@ -15,5 +15,6 @@ export default {
 <style scoped>
 h1 {
     font-size: 1.8rem;
+    border-bottom: 1px solid #ccc;
 }
 </style>
