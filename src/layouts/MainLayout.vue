@@ -29,17 +29,23 @@ div {
   justify-content: center;
 }
 #main {
+  // position: fixed;
   padding-top: 2vh;
   width: 100vw;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  background-color: #07252D;
+  height: 100vh;
 }
 
 ::v-deep #wrapper {
-  width: 70vw;
+  // width: 70vw;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #07252D;
 }
 
 h3 {

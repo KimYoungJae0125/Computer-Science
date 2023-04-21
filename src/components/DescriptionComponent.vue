@@ -32,4 +32,12 @@ ul {
 li {
     max-width: 500px;
 }
+
+@media (max-width:800px) {
+    li {
+        max-width: 80vw;
+    }
+    
+}
+
 </style>

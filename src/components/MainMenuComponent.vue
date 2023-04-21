@@ -53,7 +53,18 @@ ul {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
-  font-size: 1.7rem;
+  align-items: center;
+  font-size: 1.4rem;
+  // background-color: #000000b0;
+  // background-color: #000000;
+  // opacity: 0.6;
+  height: 50px;
+}
+::v-deep li:nth-child(1) {
+  flex-grow: 0.1;
+}
+::v-deep li:not(:nth-child(1)) {
+  flex-grow: 0.5;
 }
 
 </style>

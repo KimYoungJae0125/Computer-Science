@@ -2,6 +2,7 @@
     <div>
         <div class="code-block-title">
             <h3>{{ title }}</h3>
+            <h3>javascript</h3>
         </div>
         <pre>
             <code v-for="(code, index) in codes" :key="index">{{ code }}</code>
@@ -25,15 +26,22 @@ export default {
 .code-block-title, pre {
     width: 40vw;
     max-width: 500px;
+    color:black;
+    border: 1px solid black;
+    
 }
 .code-block-title {
-    text-align: left;
-    border: 1px solid #ccc;
     border-radius: 5px 5px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #C2BFAF;
 }
 h3 {
     margin-left: 15px;
+    margin-right: 15px;
     font-size: 0.9rem;
+    text-align: left;
 }
 pre::before {
     content: '';
@@ -48,14 +56,14 @@ pre {
     text-align: left;
     display: flex;
     flex-direction: column;
-    border: 1px solid #ccc;
+    
     font-family: monospace;
+    padding-bottom: 10px;
 
-    padding: 0;
     counter-reset: index;
     position: relative;
     background-color: #fafafa;
-    z-index: -99999;
+    z-index: 99999;
 
 }
 pre code::before {

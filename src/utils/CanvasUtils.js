@@ -21,6 +21,7 @@ const canvasScaling = (canvasId, size) => {
     const dpr = window.devicePixelRatio;
     canvas.width = width * dpr;
     canvas.height = height * dpr;
+    canvas.style.backGroundColor = '#07252D'
 
     context.scale(dpr, dpr);
 
@@ -50,6 +51,7 @@ const drawingLine = (context, lineLocationInfo) => {
     context.beginPath();
     context.moveTo(startX, startY);
     context.lineTo(endX, endY);
+    context.strokeStyle = '#C2BFAF';
     context.stroke();
     // context.closePath();
     context.restore();
@@ -74,6 +76,7 @@ const drawingArrowLine = (context, lineLocationInfo) => {
     context.lineTo(length, 0);
     context.lineTo(length - arrowHeight, arrowWidth);
 
+    context.fillStyle = '#C2BFAF';
     context.fill();
     // context.setTransform(1, 0, 0, 1, 0, 0);
     const dpr = window.devicePixelRatio;
