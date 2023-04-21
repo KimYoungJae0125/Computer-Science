@@ -1,5 +1,10 @@
 # computer-science-vue
 
+## 만든 이유
+```
+스터디 발표 내용 정리를 어떻게 할까 고민하다가 vue, github-page, github-action을 사용해보고 싶어 제작
+```
+
 ## Site link
 [Click!](https://kimyoungjae0125.github.io/Computer-Science/)
 
