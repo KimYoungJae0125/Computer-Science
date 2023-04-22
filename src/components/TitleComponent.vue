@@ -14,10 +14,10 @@ export default {
 
 <style scoped>
 h1 {
-    font-size: 1.8rem;
-    border-bottom: 1px solid #ccc;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
+  font-size: 1.8rem;
+  border-bottom: 1px solid #ccc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--title-font-color);
 }
 </style>

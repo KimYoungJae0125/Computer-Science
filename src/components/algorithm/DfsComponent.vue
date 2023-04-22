@@ -1,12 +1,13 @@
 <template>
     <div>
-        <h2>{{ title }}</h2>
+        <H2TitleComponent :title="title" />
         <DescriptionComponent title="기본 개념" :descriptions="descriptions" />
     </div>
 </template>
 
 <script>
 import DescriptionComponent from '../DescriptionComponent.vue';
+import H2TitleComponent from '../H2TitleComponent.vue';
 
 const descriptions = [
   '최대한 깊이 내려간 뒤, 더 이상 깊이 갈 곳이 없을 경우 옆으로 이동한다.',
@@ -17,7 +18,8 @@ const descriptions = [
 export default {
     name: 'DfsComponent',
     components: {
-        DescriptionComponent
+        DescriptionComponent,
+        H2TitleComponent
     },
     props: {
         title: String,
@@ -37,7 +39,6 @@ div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
 }
 </style>
 

@@ -21,13 +21,17 @@ export default {
 </script>
 
 <style scoped>
+h3 {
+    color: var(--title-font-color);
+}
 div {
-    padding-top: 1vh;
-    padding-bottom: 2vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: left;
 }
 ul {
-    padding-top: 1vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 li {
     max-width: 500px;

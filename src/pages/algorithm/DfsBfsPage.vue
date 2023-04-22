@@ -1,7 +1,7 @@
 <template>
   <div id="wrapper">
     <TitleComponent :title=title />
-    <DfsComponent ref="dfs" title="깊이 우선 탐색(DFS, Depth-First Search)이란?" />
+    <DfsComponent ref="dfs" title="깊이 우선 탐색(DFS, Depth-First Search)" />
     <BfsComponent ref="bfs" title="너비 우선 탐색(BFS, Breadth-First Search)" />
     <div>
       <h3>그림으로 보는 탐색 방법</h3>
