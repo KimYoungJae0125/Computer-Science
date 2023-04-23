@@ -45,7 +45,7 @@ export default {
     data: () => {
         return {
             menuList,
-            isShow : true
+            isShow : false
         };
     },
     components: { 
