@@ -81,6 +81,13 @@ h3 {
   ::v-deep #wrapper {
     width: 100vw;
   }
+  ::v-deep .menu-ul {
+    left: unset;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
 
 }
 </style>
