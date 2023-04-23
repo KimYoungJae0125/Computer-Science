@@ -2,7 +2,7 @@
   <nav>
     <div id="topMenuwrapper">
       <div id="hambugerButton" v-on:click="showMenu()">
-        햄버거
+        메뉴
       </div>
       <h2><router-link to="/">공부하자</router-link></h2>
     </div>
@@ -45,7 +45,7 @@ export default {
     data: () => {
         return {
             menuList,
-            isShow : false
+            isShow : true
         };
     },
     components: { 
@@ -77,13 +77,14 @@ nav {
   align-items: center;
   justify-content: center;
   position: absolute;
-  z-index: 9999999;
+  z-index: 3;
 }
 
 #hambugerButton {
   position: absolute;
   left: 15px;
-  color: black;
+  color: var(--title-font-color);
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 }
 
 #hambugerMenuWrapper {
@@ -93,13 +94,14 @@ nav {
   width: 100vw;
   height: 100vh;
   background-color: var(--normal-font-color);
+  z-index: 2;
 }
 
 h2 {
   a {
     z-index: 9999999;
-    // position: absolute;
-    color: black;
+    color: var(--title-font-color);
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
   }
 }
 ::v-deep .menu-ul {
@@ -108,7 +110,7 @@ h2 {
   top: 5vh;
   left: 5vw;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   color: black;
   text-align: left;
   li {

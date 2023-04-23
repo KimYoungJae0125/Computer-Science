@@ -18,7 +18,8 @@ export default {
 
   --normal-font-color: #C2BFAF;
   --active-font-color: #beaa3d;
-  --description-font-color: #c2bfafbe;
+  --title-font-color: #ccc;
+  --description-font-color: #C2BFAF;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -42,6 +43,10 @@ button {
   padding: 5px;
   background-color: white;
   border-radius: 5px;
+}
+
+li {
+  margin-top: 5px;
 }
 
 </style>

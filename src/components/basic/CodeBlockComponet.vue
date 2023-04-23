@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="code-block-wrapper">
         <div class="code-block-title">
             <h3>{{ title }}</h3>
             <h3>javascript</h3>
@@ -50,7 +50,6 @@ pre::before {
     border-right: 1px solid #ccc;
     width: 30px;
     height: 100%;
-    z-index: -99990;
 }
 pre {
     text-align: left;
@@ -63,8 +62,6 @@ pre {
     counter-reset: index;
     position: relative;
     background-color: #fafafa;
-    z-index: 99999;
-
 }
 pre code::before {
     counter-increment: index;
