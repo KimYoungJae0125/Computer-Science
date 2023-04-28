@@ -1,5 +1,4 @@
 {
-  "homepage": "https://kimyoungjae0125.github.io/Computer-Science/",
   "name": "computer-science-vue",
   "version": "0.1.0",
   "private": true,
@@ -7,10 +6,10 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "yarn:ci": "yarn install --immutable --immutable-cache --check-cache",
-    "predeploy": "yarn build",
     "deploy": "gh-pages -d dist",
-    "clean": "gh-pages-clean"
+    "clean": "gh-pages-clean",
+    "predeploy": "yarn build",
+    "yarn:ci": "yarn install --immutable --immutable-cache --check-cache"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -18,7 +17,8 @@
     "node-sass": "^8.0.0",
     "sass-loader": "^13.2.2",
     "vue": "^2.6.14",
-    "vue-router": "3"
+    "vue-router": "3",
+    "vuetify": "2.6.15"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -28,7 +28,10 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
-    "vue-template-compiler": "^2.6.14"
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-template-compiler": "^2.6.14",
+    "vuetify-loader": "^1.7.0"
   },
   "eslintConfig": {
     "root": true,
@@ -48,5 +51,6 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "homepage": "https://kimyoungjae0125.github.io/Computer-Science/"
 }
