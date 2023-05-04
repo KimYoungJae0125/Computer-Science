@@ -3,18 +3,27 @@
 </template>
 
 <script>
-import { getContext, drawingTree, drawingCircle } from '@/utils/CanvasUtils.js';
+import { drawingCircle, canvasScaling, drawingLine } from '@/utils/CanvasUtils.js';
 import { dfs, bfs } from '@/utils/SearchUtils.js';
 import arcInfoList from '@/assets/trees/tree.json';
 import lineInfoList from '@/assets/trees/line.json';
 
 let context;
 
+const drawingTree = (canvasId, arcInfoList, lineInfoList) => {
+    const context = canvasScaling(canvasId, [300, 550]);
+
+    arcInfoList.forEach(info => drawingCircle(context, info));
+    lineInfoList.forEach(info => drawingLine(context, info));
+
+    return context;
+}
+
+
 export default {
     name: "TreeCanvas",
     mounted() {
-        drawingTree('treeCanvas', arcInfoList, lineInfoList);
-        context = getContext('treeCanvas');
+        context = drawingTree('treeCanvas', arcInfoList, lineInfoList);
     },
     methods: {
         init() {

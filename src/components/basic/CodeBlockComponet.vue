@@ -2,7 +2,7 @@
     <div class="code-block-wrapper">
         <div class="code-block-title">
             <h3>{{ title }}</h3>
-            <h3>javascript</h3>
+            <h3>{{ codeLanguage }}</h3>
         </div>
         <pre>
             <code v-for="(code, index) in codes" :key="index">{{ code }}</code>
@@ -16,13 +16,17 @@ export default {
     name: 'CodeBlockComponent',
     props: {
         title: String,
-        codes: Array
+        codeLanguage: String,
+        codes: Array,
     }
 }
 
 </script>
 
 <style scoped>
+.code-block-wrapper {
+    padding-bottom: 20px;
+}
 .code-block-title, pre {
     width: 40vw;
     max-width: 500px;
@@ -74,7 +78,10 @@ pre code::before {
 pre code {
     margin-left: 40px;
 }
-
+code {
+    width: 80%;
+    word-wrap: break-word;
+}
 @media (max-width:800px) {
     .code-block-title, pre {
         width: 80vw;

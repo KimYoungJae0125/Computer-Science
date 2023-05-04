@@ -1,20 +1,20 @@
 <template>
   <main id="main">
-    <MenuComponent :menuList="subMenuList"/>
+    <SideMenuComponent :menuList="subMenuList"/>
     <router-view />
   </main>
 </template>
 
 <script>
 
-import MenuComponent from '@/components/MenuComponent.vue';
+import SideMenuComponent from '@/components/SideMenuComponent.vue';
 
 import { isMobile } from '@/utils/CommonUtils';
 
 export default {
   name: 'MainLayout',
   components: {
-    MenuComponent
+    SideMenuComponent
   },
   props: {
     subMenuList: Array
@@ -40,6 +40,7 @@ export default {
   align-items: flex-start;
   justify-content: center;
   // min-height: 100vh;
+  padding-bottom: 100px;
 }
 
 ::v-deep #wrapper {
@@ -48,30 +49,14 @@ export default {
   // width: 100%;
   flex-direction: column;
   border: 1px solid #ccc;
+  align-items: center;
+  padding-bottom: 50px;
 }
 
 h3 {
   margin: 40px 0 0;
 }
-::v-deep .router-link-active {
-  text-decoration: underline;
-}
-::v-deep .menu-ul {
-  position: fixed;
-  left: 7vw;
-  min-width: 15vw;
-  list-style-type: none;
-  // background-color: var(--secondary-background-color);
-  // min-height: 100vh;
 
-  margin-top: 10vh;
-  > li {
-    padding: 5px;
-    min-width: 10vw;
-    // margin-top: 10vh;
-    font-size: 1.3rem;
-  }
-}
 
 @media (max-width:800px) {
 
@@ -81,13 +66,5 @@ h3 {
   ::v-deep #wrapper {
     width: 100vw;
   }
-  ::v-deep .menu-ul {
-    left: unset;
-    bottom: 0px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-  }
-
 }
 </style>

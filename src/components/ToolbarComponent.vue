@@ -1,13 +1,13 @@
 <template>
-  <div>
-    
-  </div>
-  <!-- <MenuComponent :menuList="menuList" /> -->
+  <ul>
+    <li flat v-on:click="showMenu()" v-for="menu in menuList" :key="menu.id">
+      <router-link v-if="menu.link == '/'" to="/" exact>{{ menu.title }}</router-link>
+      <router-link v-else :to="menu.link">{{ menu.title }} </router-link>
+    </li>
+  </ul>
 </template>
 
 <script>
-
-// import MenuComponent from './MenuComponent.vue';
 
 const menuList = [
   {
@@ -33,22 +33,28 @@ const menuList = [
 });
 
 
+import { isMobile } from '@/utils/CommonUtils';
+
 export default {
-  name: 'MainMenuComponent',
-  components: {
-    // MenuComponent
-  },
-  data: () => {
-    return {
-      menuList 
+    name: 'ToolbarComponent',
+    data: () => {
+        return {
+            menuList
+        }
+    },
+    methods: {
+        showMenu() {
+            if(isMobile()) {
+                this.$parent.showMenu()
+            }
+        }
     }
-  }
 }
+
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-::v-deep .router-link-active {
+.router-link-active {
   color: var(--active-font-color);
   font-size:1.7rem;
   text-decoration: underline;
@@ -59,9 +65,6 @@ ul {
   justify-content: space-around;
   align-items: center;
   font-size: 1.4rem;
-  // background-color: #000000b0;
-  // background-color: #000000;
-  // opacity: 0.6;
   height: 70px;
 }
 

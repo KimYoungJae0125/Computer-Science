@@ -3,12 +3,6 @@ const pathCheck = (path) =>
 
 const toRadian = (d) => (d * Math.PI) / 180;
 
-const getContext = (canvasId) => {
-    const canvas = document.getElementById(canvasId);
-
-    return canvas.getContext('2d');
-}
-
 const canvasScaling = (canvasId, size) => {
     const [width, height] = size;
     const canvas = document.getElementById(canvasId);
@@ -85,43 +79,12 @@ const drawingArrowLine = (context, lineLocationInfo) => {
     // context.closePath();
 }
 
-const drawingGraph = (canvasId, arcInfoList, lineInfoList) => {
-    const context = canvasScaling(canvasId, [300, 200]);
+const drawingWeightText = (context, weightInfo) => {
+    const {x, y, text} = weightInfo;
 
-    arcInfoList.forEach(info => drawingCircle(context, info));
-    lineInfoList.filter((v,i) => i<4).forEach(info => drawingLine(context, info))
+    context.fillStyle = 'white';
+    context.font = '20px malgun gothic';
+    context.fillText(text, x, y);
 }
 
-const drawingDirectedGraph = (canvasId, arcInfoList, lineInfoList) => {
-    const context = canvasScaling(canvasId, [300, 200]);
-
-    arcInfoList.forEach(info => drawingCircle(context, info));
-    lineInfoList.filter((v,i) => i<4).forEach(info => drawingArrowLine(context, info))
-}
-const drawingComplteGraph = (canvasId, arcInfoList, lineInfoList) => {
-    const context = canvasScaling(canvasId, [300, 200]);
-
-    arcInfoList.forEach(info => drawingCircle(context, info));
-    lineInfoList.forEach(info => drawingLine(context, info))
-}
-
-const drawingDirectedComplteGraph = (canvasId, arcInfoList, lineInfoList) => {
-    const context = canvasScaling(canvasId, [300, 200]);
-
-    arcInfoList.forEach(info => drawingCircle(context, info));
-    const reverseLineList = [];
-    lineInfoList.forEach(info => {
-        drawingArrowLine(context, info)
-        reverseLineList.push({startX: info.endX, startY: info.endY, endX: info.startX, endY: info.startY});
-    })
-    reverseLineList.forEach(info => drawingArrowLine(context, info))
-}
-
-const drawingTree = (canvasId, arcInfoList, lineInfoList) => {
-    const context = canvasScaling(canvasId, [300, 550]);
-
-    arcInfoList.forEach(info => drawingCircle(context, info));
-    lineInfoList.forEach(info => drawingLine(context, info));
-}
-
-export {pathCheck, getContext, drawingCircle, drawingGraph, drawingDirectedGraph, drawingComplteGraph, drawingDirectedComplteGraph, drawingTree};
+export {pathCheck, canvasScaling, drawingCircle, drawingLine, drawingArrowLine, drawingWeightText};

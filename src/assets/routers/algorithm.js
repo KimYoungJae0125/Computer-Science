@@ -3,6 +3,7 @@ import algorithmMenu from "@/assets/menus/algorithm.json";
 import MainLayout from '@/layouts/MainLayout.vue'
 import MainPage from '@/pages/MainPage.vue'
 import DfsBfsPage from '@/pages/algorithm/DfsBfsPage.vue'
+import DijkstraPage from '@/pages/algorithm/DijkstraPage.vue'
 
 const algorithm =  {
     path: 'algorithm',
@@ -24,6 +25,13 @@ const algorithm =  {
             component: DfsBfsPage,
             props: {
                 title: 'DFS/BFS'
+            }
+        },
+        {
+            path: 'dijkstra',
+            component: DijkstraPage,
+            props: {
+                title: '다익스트라(Dijkstra)'
             }
         }
     ]

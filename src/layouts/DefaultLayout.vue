@@ -1,14 +1,12 @@
 <template>
   <div>
-    <MainMenuComponent v-if="!isMobile" />
-    <MobileMainMenuComponet v-else />
+    <ToolbarComponent />
     <router-view />
   </div>
 </template>
 
 <script>
-import MainMenuComponent from '@/components/MainMenuComponent.vue'
-import MobileMainMenuComponet from '@/components/MobileMainMenuComponent.vue'
+import ToolbarComponent from '@/components/ToolbarComponent.vue';
 
 import { isMobile } from '@/utils/CommonUtils';
 
@@ -16,8 +14,7 @@ import { isMobile } from '@/utils/CommonUtils';
 export default {
   name: 'DefaultLayout',
   components: {
-    MainMenuComponent,
-    MobileMainMenuComponet
+    ToolbarComponent,
   },
   data: () => {
     return {

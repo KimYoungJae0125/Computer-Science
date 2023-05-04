@@ -7,13 +7,13 @@
       <h2><router-link to="/">공부하자</router-link></h2>
     </div>
     <div id="hambugerMenuWrapper" v-if="isShow">
-      <MenuComponent :menuList="menuList" />
+      <!-- <MenuComponent :menuList="menuList" /> -->
     </div >
   </nav>
 </template>
 
 <script>
-import MenuComponent from './MenuComponent.vue';
+// import MenuComponent from './MenuComponent.vue';
 
 
 const menuList = [
@@ -49,7 +49,7 @@ export default {
         };
     },
     components: { 
-      MenuComponent 
+      // MenuComponent 
     },
     methods: {
       showMenu() {

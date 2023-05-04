@@ -3,5 +3,10 @@
         "id": 1,
         "title": "dfs/bfs",
         "link": "dfs-bfs"
+    },
+    {
+        "id": 2,
+        "title": "다익스트라(dijkstra)",
+        "link": "dijkstra"
     }
 ]

@@ -1,9 +1,7 @@
 <template>
     <div>
         <DescriptionComponent title="기본 개념" :descriptions="descriptions" />
-        <div>
-            <CodeBlockComponet title="예시 코드" :codes="codes" />
-        </div>
+        <CodeBlockComponet codeLanguage="javaScript" title="예시 코드" :codes="codes" />
     </div>
 </template>
 

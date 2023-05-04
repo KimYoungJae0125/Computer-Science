@@ -35,6 +35,7 @@ ul {
 }
 li {
     max-width: 500px;
+    width: 40vw;
     color: var(--description-font-color) !important;
 }
 
