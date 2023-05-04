@@ -9,7 +9,7 @@ import lineInfoList from '@/assets/graphs/line2.json';
 import weightInfoList from '@/assets/graphs/weight.json'
 
 const drawingWeightGraph = (canvasId, arcInfoList, lineInfoList, weightInfoList) => {
-    const context = canvasScaling(canvasId, [300, 550]);
+    const context = canvasScaling(canvasId, [300, 250]);
 
     arcInfoList.forEach(info => drawingCircle(context, info));
     lineInfoList.forEach(info => drawingLine(context, info));
